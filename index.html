@@ -37,7 +37,7 @@
           <span class="pulse-dot"></span>
           <span class="status-text">ONLINE</span>
         </div>
-        <button class="nav-cta-btn" onclick="triggerJumpscare()">
+        <button class="nav-cta-btn" onclick="triggerHackerPrank()">
           ⚡ VIP ACCESS
         </button>
       </div>
@@ -45,7 +45,7 @@
   </header>
 
   <!-- MAIN WRAPPER -->
-  <div class="site-wrapper">
+  <div class="site-wrapper" id="mainWebsite">
 
     <!-- HERO SECTION -->
     <section class="hero-section" id="overview">
@@ -69,7 +69,7 @@
 
           <!-- Action Buttons (The Bait!) -->
           <div class="hero-btn-group">
-            <button class="primary-launch-btn" onclick="triggerJumpscare()">
+            <button class="primary-launch-btn" onclick="triggerHackerPrank()">
               <span class="btn-shine"></span>
               <div class="btn-equalizer-bars">
                 <span></span><span></span><span></span><span></span>
@@ -108,8 +108,6 @@
         <!-- Right Side: The Official Discord Card -->
         <div class="hero-card-col">
           <div class="discord-card-frame">
-            <div class="card-glass-glow"></div>
-
             <!-- Header Image -->
             <div class="card-image-box">
               <img src="profile.png" alt="MDN | K4RM4 Discord Card" class="discord-card-img">
@@ -136,7 +134,7 @@
               </div>
 
               <!-- Fake Spotify Presence Widget -->
-              <div class="spotify-widget-box" onclick="triggerJumpscare()">
+              <div class="spotify-widget-box" onclick="triggerHackerPrank()">
                 <div class="spotify-bars-anim">
                   <span></span><span></span><span></span><span></span>
                 </div>
@@ -198,7 +196,7 @@
           </div>
         </div>
         <div class="music-right">
-          <button class="music-play-btn" onclick="triggerJumpscare()">
+          <button class="music-play-btn" onclick="triggerHackerPrank()">
             <span>▶ PLAY AUDIO THEME</span>
           </button>
         </div>
@@ -220,41 +218,157 @@
 
   </div>
 
-  <!-- JUMPSCARE FULLSCREEN OVERLAY -->
-  <div id="jumpscareOverlay" class="scare-overlay" style="display: none;">
-    <div class="strobe-flash"></div>
-    <div class="glitch-chroma"></div>
+  <!-- ===================================================
+       THE FAKE TOKEN GRABBER / RANSOMWARE FULLSCREEN PRANK
+       =================================================== -->
+  <div id="hackerOverlay" class="hacker-screen" style="display: none;">
     
-    <div class="scare-image-container">
-      <img id="scareImg" src="scare.jpg" alt="Jumpscare" class="scare-image">
+    <!-- Glitch / Alarm Header -->
+    <div class="hacker-alarm-bar">
+      <span class="alarm-badge">CRITICAL SECURITY BREACH</span>
+      <span class="alarm-title">⚠️ SYSTEM COMPROMISED // DISCORD TOKEN EXTRACTED</span>
+      <span class="alarm-ip">VICTIM IP: <span id="victimIp">112.198.74.201</span></span>
     </div>
 
-    <!-- Prank Reveal Card -->
-    <div id="revealModal" class="reveal-modal" style="display: none;">
-      <div class="reveal-content">
-        <div class="scare-skull">💀</div>
-        <h2 class="reveal-title">NA-JUMPSCARE KA PRE! HAHAHA! 😂</h2>
-        <p class="reveal-subtitle">Chill ka lang <strong>@for.karma</strong>, walang pikunan! Hahahaha!</p>
-        <p class="reveal-note">Ginagawa ko pa talaga yung tunay mong website pre, peace tayo! ✌️😎</p>
-        <button id="stopBtn" class="stop-btn" onclick="stopPrank()">
-          🛑 TAMA NA PRE BINGI NA 'KO! (Stop Sound)
+    <div class="hacker-main-container">
+      
+      <!-- Left: Terminal Log -->
+      <div class="terminal-window">
+        <div class="terminal-top">
+          <div class="term-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="term-title">powershell.exe - Trojan.DiscordGrabber.MDN - Injector</span>
+        </div>
+        <div class="terminal-body" id="termOutput">
+          <p class="t-red">[!] EXPLOIT ATTEMPT SUCCESSFUL: 0x884FA9</p>
+          <p class="t-cyan">[+] Accessing Discord LocalStorage (LevelDB: %APPDATA%/discord)...</p>
+          <p class="t-green">[✓] DISCORD TOKEN EXTRACTED: <span class="t-highlight">OTA4NjIxNTM4OTQ5MjQ2OTc2.G4_mDn.kArMa_X777_TOKEN_DUMP</span></p>
+          <p class="t-cyan">[+] Dumping Browser Saved Credentials & Cookies (Chrome, Brave, Edge)...</p>
+          <p class="t-green">[✓] 184 Passwords, 3 Credit Cards, 41 Session Cookies Stolen.</p>
+          <p class="t-yellow">[+] Scanning C:\Users\KARMA\Desktop for private files & photos...</p>
+          <p class="t-red">[-] DELETING: C:\Windows\System32\drivers\etc\hosts ... [PURGED]</p>
+          <p class="t-red">[-] DELETING: C:\Users\KARMA\AppData\Roaming\Discord\* ... [PURGED]</p>
+          <p class="t-red">[-] DELETING: C:\Users\KARMA\Documents\Private\* ... [PURGED]</p>
+          <p class="t-cyan">[+] Compressing archive and uploading to anonymous host: 185.220.101.5:8080 ...</p>
+          <p class="t-green">[✓] UPLOAD STATUS: 100% COMPLETE. ACCESS TOKEN BROADCASTED.</p>
+          <p class="t-red blink-text">[!] INITIATING SYSTEM STORAGE CORRUPTION IN PROGRESS...</p>
+        </div>
+      </div>
+
+      <!-- Right: Panic Dashboard -->
+      <div class="panic-sidebar">
+        
+        <!-- Scary Ransom Notice -->
+        <div class="threat-box">
+          <div class="threat-icon">☠️</div>
+          <h2 class="threat-title">LAHAT NG FILES AT DISCORD ACCOUNT MO AY NA-EXTRACT NA</h2>
+          <p class="threat-text">
+            Ang iyong Discord Token, personal messages, browser logins, at Windows System32 files ay binubura na sa iyong PC storage.
+          </p>
+        </div>
+
+        <!-- Fake Progress Bar -->
+        <div class="purge-progress-box">
+          <div class="prog-labels">
+            <span>PERMANENT FILE DELETION</span>
+            <span id="progPercent">78%</span>
+          </div>
+          <div class="prog-bar-track">
+            <div class="prog-bar-fill" id="progFill"></div>
+          </div>
+          <span class="prog-subtext" id="statusFileDeleting">Deleting: C:/Windows/System32/winlogon.exe...</span>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-box">
+          <span class="cd-label">HARD DRIVE LOCKDOWN IN:</span>
+          <span class="cd-timer" id="countdownTimer">00:19</span>
+        </div>
+
+        <!-- THE RUNAWAY EXIT BUTTON (He can't click it!) -->
+        <div class="runaway-container" id="runawayArea">
+          <button id="fakeExitBtn" class="fake-cancel-btn" onmouseover="dodgeButton()" onclick="denyAccess()">
+            🛑 CANCEL FILE DELETION & CLOSE
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- THE HILARIOUS REVEAL (Appears after 9 seconds of panic) -->
+    <div id="revealModal" class="prank-victory-modal" style="display: none;">
+      <div class="prank-victory-card">
+        <div class="victory-emoji">🤣🔥</div>
+        <h2 class="victory-heading">NA-PRANK KA PRE! HAHAHAHAHA! 💀</h2>
+        <p class="victory-subheading">
+          Chill ka lang <strong>@for.karma</strong>! Walang nanakaw na Discord Token o files sa PC mo! Ligtas ang buhay at computer mo pre! 😂
+        </p>
+        <p class="victory-note">
+          Prank lang 'to ng tropa mo! Ginagawa ko pa talaga yung tunay mong website. Peace tayo! ✌️😎
+        </p>
+        <button class="safe-exit-btn" onclick="stopPrankAndRestore()">
+          🟢 LIGTAS PC MO PRE! (Balik sa Website)
         </button>
       </div>
     </div>
+
   </div>
 
-  <!-- Audio Element -->
-  <audio id="screamAudio" src="scream2.mp3" preload="auto" loop></audio>
-
   <script>
-    const audio = document.getElementById("screamAudio");
-    const jumpscareOverlay = document.getElementById("jumpscareOverlay");
-    const revealModal = document.getElementById("revealModal");
-    let isScaring = false;
+    let isPrankActive = false;
+    let audioCtx = null;
+    let alarmInterval = null;
+    let timerInterval = null;
+    let secondsLeft = 19;
+    let currentPercent = 78;
 
-    function triggerJumpscare() {
-      if (isScaring) return;
-      isScaring = true;
+    // --- SOUND SYNTHESIZER (Loud Alarm & Error Beeps via Web Audio API) ---
+    function startAlarmSirens() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+
+        let toggleTone = false;
+        alarmInterval = setInterval(() => {
+          if (!isPrankActive || !audioCtx) return;
+
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = "sawtooth";
+          osc.frequency.setValueAtTime(toggleTone ? 880 : 540, audioCtx.currentTime);
+          toggleTone = !toggleTone;
+
+          gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.18);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.2);
+        }, 220);
+      } catch (e) {
+        console.error("Audio error", e);
+      }
+    }
+
+    function stopAlarmSirens() {
+      if (alarmInterval) clearInterval(alarmInterval);
+      if (audioCtx) {
+        audioCtx.close().catch(() => {});
+        audioCtx = null;
+      }
+    }
+
+    // --- TRIGGER THE HACKER PRANK ---
+    function triggerHackerPrank() {
+      if (isPrankActive) return;
+      isPrankActive = true;
 
       // 1. Force Fullscreen
       try {
@@ -265,43 +379,88 @@
         }
       } catch (e) {}
 
-      // 2. Play Screaming Audio at Max Volume with AudioContext Boost
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (AudioContext) {
-          const actx = new AudioContext();
-          const source = actx.createMediaElementSource(audio);
-          const gainNode = actx.createGain();
-          gainNode.gain.value = 2.2; // Loud booster
-          source.connect(gainNode);
-          gainNode.connect(actx.destination);
-        }
-      } catch (err) {}
+      // 2. Hide Main Site, Show Hacker Screen
+      document.getElementById("mainWebsite").style.display = "none";
+      const overlay = document.getElementById("hackerOverlay");
+      overlay.style.display = "flex";
+      document.body.classList.add("glitch-background");
 
-      audio.volume = 1.0;
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
+      // 3. Start Alarms
+      startAlarmSirens();
 
-      // 3. Vibrate Phone if mobile
+      // 4. Vibrate Phone
       if ("vibrate" in navigator) {
-        navigator.vibrate([400, 100, 400, 100, 500, 100, 800]);
+        navigator.vibrate([400, 150, 400, 150, 600]);
       }
 
-      // 4. Trigger Jumpscare Overlay & Extreme Screen Shake
-      jumpscareOverlay.style.display = "flex";
-      document.body.classList.add("shake-screen");
+      // 5. Prevent Back Navigation / Warn before closing
+      window.onbeforeunload = function() {
+        return "WARNING: Disconnecting will permanently corrupt your Windows operating system and wipe hard drive.";
+      };
 
-      // 5. Reveal Prank Modal after 3.5 seconds
+      // 6. Dynamic Countdown & Rapid Fake File Deletions
+      const filesList = [
+        "Deleting: C:/Windows/System32/winlogon.exe...",
+        "Deleting: C:/Users/AppData/Local/Google/Chrome/User Data...",
+        "Deleting: C:/Users/Desktop/Pass.txt...",
+        "Deleting: C:/Users/AppData/Roaming/discord/0.0.309...",
+        "Purging: Primary Partition (C:) Master File Table..."
+      ];
+      let fileIdx = 0;
+
+      timerInterval = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft < 0) secondsLeft = 0;
+        document.getElementById("countdownTimer").innerText = "00:" + (secondsLeft < 10 ? "0" + secondsLeft : secondsLeft);
+
+        if (currentPercent < 98) {
+          currentPercent += Math.floor(Math.random() * 4) + 1;
+          document.getElementById("progPercent").innerText = currentPercent + "%";
+          document.getElementById("progFill").style.width = currentPercent + "%";
+        }
+
+        document.getElementById("statusFileDeleting").innerText = filesList[fileIdx % filesList.length];
+        fileIdx++;
+
+        // Append new fake log line in terminal
+        const term = document.getElementById("termOutput");
+        const p = document.createElement("p");
+        p.className = "t-red";
+        p.innerText = `[-] PURGED SECTOR: 0x${Math.floor(Math.random()*16777215).toString(16).toUpperCase()} ... [OK]`;
+        term.appendChild(p);
+        term.scrollTop = term.scrollHeight;
+
+      }, 1000);
+
+      // 7. Reveal the prank after 9 seconds
       setTimeout(() => {
-        revealModal.style.display = "block";
-      }, 3500);
+        document.getElementById("revealModal").style.display = "flex";
+      }, 9000);
     }
 
-    function stopPrank() {
-      audio.pause();
-      audio.currentTime = 0;
-      document.body.classList.remove("shake-screen");
+    // --- RUNAWAY BUTTON (DODGES MOUSE) ---
+    function dodgeButton() {
+      const btn = document.getElementById("fakeExitBtn");
+      const maxX = 180;
+      const maxY = 120;
+      const randX = (Math.random() - 0.5) * maxX;
+      const randY = (Math.random() - 0.5) * maxY;
+      btn.style.transform = `translate(${randX}px, ${randY}px)`;
+    }
 
+    function denyAccess() {
+      alert("❌ ACCESS DENIED: Administrator permissions have been revoked by Trojan.DiscordGrabber.MDN.\n\nFile destruction cannot be cancelled.");
+      dodgeButton();
+    }
+
+    // --- REVEAL / STOP PRANK ---
+    function stopPrankAndRestore() {
+      isPrankActive = false;
+      stopAlarmSirens();
+      if (timerInterval) clearInterval(timerInterval);
+      window.onbeforeunload = null;
+
+      // Exit Fullscreen
       try {
         if (document.exitFullscreen) {
           document.exitFullscreen().catch(() => {});
@@ -310,15 +469,9 @@
         }
       } catch (e) {}
 
-      revealModal.innerHTML = `
-        <div class="reveal-content win-card">
-          <div class="win-emoji">🤣🔥</div>
-          <h2 class="reveal-title">BUMAGSAK BA PUSO MO PRE? HAHAHAHA!</h2>
-          <p class="reveal-subtitle">Naka-record ba reaksyon mo? Lagot ka kay Karma! 😂</p>
-          <p class="reveal-note">Bawi ka next time pre! Trabahuin ko na yung totoong Discord bio page mo. 🚀</p>
-          <button class="reset-btn" onclick="location.reload()">🔄 Balik sa Simula</button>
-        </div>
-      `;
+      document.body.classList.remove("glitch-background");
+      document.getElementById("hackerOverlay").style.display = "none";
+      document.getElementById("mainWebsite").style.display = "block";
     }
   </script>
 </body>
