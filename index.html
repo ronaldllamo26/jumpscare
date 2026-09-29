@@ -299,21 +299,6 @@
 
     </div>
 
-    <!-- THE HILARIOUS REVEAL (Appears after 9 seconds of panic) -->
-    <div id="revealModal" class="prank-victory-modal" style="display: none;">
-      <div class="prank-victory-card">
-        <div class="victory-emoji">🤣🔥</div>
-        <h2 class="victory-heading">NA-PRANK KA PRE! HAHAHAHAHA! 💀</h2>
-        <p class="victory-subheading">
-          Chill ka lang <strong>@for.karma</strong>! Walang nanakaw na Discord Token o files sa PC mo! Ligtas ang buhay at computer mo pre! 😂
-        </p>
-        <p class="victory-note">
-          Prank lang 'to ng tropa mo! Ginagawa ko pa talaga yung tunay mong website. Peace tayo! ✌️😎
-        </p>
-        <button class="safe-exit-btn" onclick="stopPrankAndRestore()">
-          🟢 LIGTAS PC MO PRE! (Balik sa Website)
-        </button>
-      </div>
     </div>
 
   </div>
@@ -432,10 +417,12 @@
 
       }, 1000);
 
-      // 7. Reveal the prank after 9 seconds
-      setTimeout(() => {
-        document.getElementById("revealModal").style.display = "flex";
-      }, 9000);
+      // Secret ESC key listener to stop prank if needed
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" || e.key === "p" || e.key === "P") {
+          stopPrankAndRestore();
+        }
+      });
     }
 
     // --- RUNAWAY BUTTON (DODGES MOUSE) ---
