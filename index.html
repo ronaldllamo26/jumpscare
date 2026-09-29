@@ -3,86 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MDN | K4RM4 • Discord Portfolio</title>
+  <title>MDN | K4RM4 • Official 3D Discord Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@400;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Silkscreen&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="profile.png">
 </head>
 <body>
 
-  <!-- Background Ambience -->
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
   <div class="cyber-grid"></div>
+  <div class="scan-beam"></div>
   <div class="glow-orb orb-1"></div>
   <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
 
-  <!-- Main Showcase Container -->
+  <!-- Main Container -->
   <main class="page-container" id="mainPage">
-    <!-- Top Nav / Badge -->
+    
+    <!-- Top Futuristic Bar -->
     <header class="top-bar">
       <div class="status-pill">
         <span class="live-dot"></span>
-        <span>DISCORD PORTFOLIO v2.0 • FOR @for.karma</span>
+        <span class="sys-text">MDN NETWORK // SECURE CONNECTION</span>
       </div>
-      <div class="brand-tag">MDN CLAN</div>
+      <div class="clan-badge-glitch" data-text="MDN CLAN">
+        <span class="spider-icon">🕷️</span> MDN CLAN
+      </div>
     </header>
 
-    <!-- Center Profile Card Wrapper -->
-    <section class="card-wrapper">
-      <div class="profile-card">
-        <!-- Card Header / Glow -->
-        <div class="card-glow"></div>
+    <!-- Main 3D Interactive Card -->
+    <div class="tilt-container" id="tiltContainer">
+      <article class="profile-card" id="cardElement">
+        <!-- Holographic Border Glow -->
+        <div class="holo-border"></div>
 
-        <!-- Discord Card Image Preview -->
+        <!-- Tech Corner Accents -->
+        <div class="corner-tech top-left"></div>
+        <div class="corner-tech top-right"></div>
+        <div class="corner-tech bottom-left"></div>
+        <div class="corner-tech bottom-right"></div>
+
+        <!-- Discord Card Showcase Banner -->
         <div class="image-showcase">
           <img src="profile.png" alt="MDN | K4RM4 Discord Profile" class="discord-avatar-banner" id="profileImg">
           <div class="scanline"></div>
+          <div class="banner-overlay-tag">
+            <span class="rec-dot"></span> LIVE PROFILE
+          </div>
         </div>
 
-        <!-- Profile Details -->
+        <!-- Profile Details Body -->
         <div class="profile-info">
+          
+          <!-- Name & Verification -->
           <div class="name-row">
             <h1 class="pixel-name">MDN | K4RM4</h1>
-            <span class="verified-badge" title="Verified MDN Clan">✓</span>
+            <span class="verified-badge" title="Official MDN Elite">✓</span>
+            <span class="level-tag">LVL 99</span>
           </div>
-          <p class="user-handle">@for.karma • <span>On top</span></p>
 
+          <p class="user-handle">@for.karma • <span class="quote-status">"On top"</span></p>
+
+          <!-- Badges (Swabe updated!) -->
           <div class="badges-row">
-            <span class="chip chip-mdn">🕷️ MDN</span>
-            <span class="chip chip-role">Developer</span>
-            <span class="chip chip-status">🔴 Do Not Disturb</span>
+            <span class="chip chip-mdn">
+              <span class="chip-glow"></span>
+              🕷️ MDN
+            </span>
+            <span class="chip chip-swabe">
+              <span class="chip-glow"></span>
+              😎 Swabe
+            </span>
+            <span class="chip chip-status">
+              <span class="chip-dot"></span>
+              Do Not Disturb
+            </span>
+            <span class="chip chip-aura">
+              ⚡ 100k Aura
+            </span>
           </div>
 
+          <!-- Fake Spotify Widget (Adds huge authenticity!) -->
+          <div class="spotify-presence">
+            <div class="spotify-icon-box">
+              <div class="sound-bars">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="spotify-details">
+              <span class="spotify-status-label">LISTENING TO SPOTIFY</span>
+              <span class="spotify-track-name">Karma - Swabe Mode (Slowed + Reverb)</span>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+              </div>
+            </div>
+            <div class="spotify-time">2:14</div>
+          </div>
+
+          <!-- Bio Pitch Box -->
           <div class="description-box">
-            <p>Welcome to the official custom web experience built for <strong>MDN KARMA</strong>. Click below to enter the interactive 3D bio and listen to the profile anthem.</p>
+            <p>Welcome to the official custom 3D web experience built exclusively for <strong>MDN KARMA</strong>. Click below to initialize 3D visuals and spatial audio theme.</p>
           </div>
 
-          <!-- THE BAIT BUTTON -->
+          <!-- Quick Stats Counter -->
+          <div class="stats-counter">
+            <div class="stat-item">
+              <span class="stat-num">1.8k</span>
+              <span class="stat-label">VIEWS</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">#1</span>
+              <span class="stat-label">SWABE TIER</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">AUTHENTIC</span>
+            </div>
+          </div>
+
+          <!-- THE BAIT BUTTON (Maximum Urge to Click) -->
           <button id="baitBtn" class="launch-btn" onclick="triggerJumpscare()">
-            <span class="btn-shine"></span>
-            <span class="btn-icon">⚡</span>
-            <span class="btn-text">ENTER PORTFOLIO</span>
-            <span class="btn-subtext">Click to initialize sound & visuals</span>
+            <div class="btn-reflection"></div>
+            <div class="btn-equalizer">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="btn-content">
+              <span class="btn-title">▶ ENTER 3D PORTFOLIO</span>
+              <span class="btn-subtitle">🔊 UNMUTE SPATIAL AUDIO • 24-BIT LOSSLESS</span>
+            </div>
+            <span class="btn-arrow">➔</span>
           </button>
+
         </div>
+      </article>
+    </div>
+
+    <!-- Bottom Hint -->
+    <footer class="footer-bar">
+      <p class="headphone-tip">
+        <span class="hp-icon">🎧</span> Best experienced with headphones & maximum volume
+      </p>
+      <div class="security-seal">
+        <span>🔒 ENCRYPTED BY MDN LABS</span>
       </div>
-      
-      <p class="footer-hint">🎧 Wear headphones for the best immersive experience</p>
-    </section>
+    </footer>
   </main>
 
   <!-- JUMPSCARE FULLSCREEN OVERLAY -->
   <div id="jumpscareOverlay" class="scare-overlay" style="display: none;">
     <div class="strobe-flash"></div>
+    <div class="glitch-chroma"></div>
+    
     <div class="scare-image-container">
       <img id="scareImg" src="scare.jpg" alt="Jumpscare" class="scare-image">
     </div>
 
-    <!-- Prank Reveal Card (Appears after 3.5 seconds) -->
+    <!-- Prank Reveal Card -->
     <div id="revealModal" class="reveal-modal" style="display: none;">
       <div class="reveal-content">
-        <h2 class="reveal-title">💀 NA-JUMPSCARE KA PRE! HAHAHA! 😂</h2>
+        <div class="scare-skull">💀</div>
+        <h2 class="reveal-title">NA-JUMPSCARE KA PRE! HAHAHA! 😂</h2>
         <p class="reveal-subtitle">Chill ka lang <strong>@for.karma</strong>, walang pikunan! Hahahaha!</p>
         <p class="reveal-note">Ginagawa ko pa talaga yung tunay mong website pre, peace tayo! ✌️😎</p>
         <button id="stopBtn" class="stop-btn" onclick="stopPrank()">
@@ -96,57 +181,133 @@
   <audio id="screamAudio" src="scream2.mp3" preload="auto" loop></audio>
 
   <script>
-    let audio = document.getElementById("screamAudio");
-    let jumpscareOverlay = document.getElementById("jumpscareOverlay");
-    let revealModal = document.getElementById("revealModal");
+    const audio = document.getElementById("screamAudio");
+    const jumpscareOverlay = document.getElementById("jumpscareOverlay");
+    const revealModal = document.getElementById("revealModal");
     let isScaring = false;
 
+    // --- Interactive Particles Background ---
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.8;
+        this.speedX = (Math.random() - 0.5) * 0.7;
+        this.speedY = (Math.random() - 0.5) * 0.7;
+        this.color = Math.random() > 0.5 ? "rgba(0, 255, 136, " : "rgba(157, 78, 221, ";
+        this.alpha = Math.random() * 0.6 + 0.2;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.fillStyle = this.color + this.alpha + ")";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        p.update();
+        p.draw();
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // --- 3D Card Hover Tilt Effect ---
+    const card = document.getElementById("cardElement");
+    const tiltContainer = document.getElementById("tiltContainer");
+
+    tiltContainer.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = -(y / 20);
+      const rotateY = (x / 20);
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+
+    tiltContainer.addEventListener("mouseleave", () => {
+      card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+    });
+
+    // --- Jumpscare Trigger ---
     function triggerJumpscare() {
       if (isScaring) return;
       isScaring = true;
 
-      // 1. Force Fullscreen
+      // 1. Request Fullscreen
       try {
         if (document.documentElement.requestFullscreen) {
           document.documentElement.requestFullscreen().catch(() => {});
         } else if (document.documentElement.webkitRequestFullscreen) {
           document.documentElement.webkitRequestFullscreen();
         }
-      } catch (e) {
-        console.log("Fullscreen blocked or not supported", e);
-      }
+      } catch (e) {}
 
-      // 2. Play Screaming Audio at Max Volume
+      // 2. Play Screaming Audio at Max Volume with AudioContext Boost
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          const actx = new AudioContext();
+          const source = actx.createMediaElementSource(audio);
+          const gainNode = actx.createGain();
+          gainNode.gain.value = 2.0; // Boost loudness
+          source.connect(gainNode);
+          gainNode.connect(actx.destination);
+        }
+      } catch (err) {}
+
       audio.volume = 1.0;
       audio.currentTime = 0;
-      audio.play().catch(err => {
-        console.error("Audio playback error:", err);
-      });
+      audio.play().catch(() => {});
 
-      // 3. Vibrate Phone if on Android / Mobile
+      // 3. Vibrate Phone
       if ("vibrate" in navigator) {
         navigator.vibrate([400, 100, 400, 100, 500, 100, 800]);
       }
 
-      // 4. Show Terrifying Overlay & Add Shake Animation
+      // 4. Show Terrifying Overlay & Violently Shake Screen
       jumpscareOverlay.style.display = "flex";
       document.body.classList.add("shake-screen");
 
-      // 5. Show Prank Reveal Button after 3.5 seconds so they can laugh and turn it off
+      // 5. Show Prank Reveal Modal after 3.5 seconds
       setTimeout(() => {
         revealModal.style.display = "block";
       }, 3500);
     }
 
     function stopPrank() {
-      // Pause Audio
       audio.pause();
       audio.currentTime = 0;
-
-      // Remove Shake
       document.body.classList.remove("shake-screen");
 
-      // Exit Fullscreen
       try {
         if (document.exitFullscreen) {
           document.exitFullscreen().catch(() => {});
@@ -155,7 +316,6 @@
         }
       } catch (e) {}
 
-      // Update Modal to celebration
       revealModal.innerHTML = `
         <div class="reveal-content win-card">
           <div class="win-emoji">🤣🔥</div>
