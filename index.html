@@ -3,156 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MDN | K4RM4 • Official 3D Discord Portfolio</title>
+  <title>MDN KARMA • Official Discord Website & Showcase</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Silkscreen&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Silkscreen&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="profile.png">
 </head>
 <body>
 
-  <!-- Interactive Particle Background Canvas -->
-  <canvas id="particleCanvas"></canvas>
-  <div class="cyber-grid"></div>
-  <div class="scan-beam"></div>
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
-  <div class="glow-orb orb-3"></div>
+  <!-- Ambient Cyber Lighting -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+  <div class="cyber-grid-overlay"></div>
 
-  <!-- Main Container -->
-  <main class="page-container" id="mainPage">
-    
-    <!-- Top Futuristic Bar -->
-    <header class="top-bar">
-      <div class="status-pill">
-        <span class="live-dot"></span>
-        <span class="sys-text">MDN NETWORK // SECURE CONNECTION</span>
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon">🕷️</span>
+        <span class="brand-text">MDN <span class="accent-text">//</span> KARMA</span>
       </div>
-      <div class="clan-badge-glitch" data-text="MDN CLAN">
-        <span class="spider-icon">🕷️</span> MDN CLAN
-      </div>
-    </header>
 
-    <!-- Main 3D Interactive Card -->
-    <div class="tilt-container" id="tiltContainer">
-      <article class="profile-card" id="cardElement">
-        <!-- Holographic Border Glow -->
-        <div class="holo-border"></div>
+      <nav class="nav-links">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Specialties</a>
+        <a href="#anthem" class="nav-link">Music</a>
+      </nav>
 
-        <!-- Tech Corner Accents -->
-        <div class="corner-tech top-left"></div>
-        <div class="corner-tech top-right"></div>
-        <div class="corner-tech bottom-left"></div>
-        <div class="corner-tech bottom-right"></div>
-
-        <!-- Discord Card Showcase Banner -->
-        <div class="image-showcase">
-          <img src="profile.png" alt="MDN | K4RM4 Discord Profile" class="discord-avatar-banner" id="profileImg">
-          <div class="scanline"></div>
-          <div class="banner-overlay-tag">
-            <span class="rec-dot"></span> LIVE PROFILE
-          </div>
+      <div class="nav-actions">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text">ONLINE</span>
         </div>
+        <button class="nav-cta-btn" onclick="triggerJumpscare()">
+          ⚡ VIP ACCESS
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <!-- Profile Details Body -->
-        <div class="profile-info">
-          
-          <!-- Name & Verification -->
-          <div class="name-row">
-            <h1 class="pixel-name">MDN | K4RM4</h1>
-            <span class="verified-badge" title="Official MDN Elite">✓</span>
-            <span class="level-tag">LVL 99</span>
+  <!-- MAIN WRAPPER -->
+  <div class="site-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="overview">
+      <div class="hero-content">
+        
+        <!-- Left Side: Hero Info & Pitch -->
+        <div class="hero-text-col">
+          <div class="cyber-pill">
+            <span class="pill-spark">🔥</span>
+            <span>OFFICIAL WEB EXPERIENCE • FOR @for.karma</span>
           </div>
 
-          <p class="user-handle">@for.karma • <span class="quote-status">"On top"</span></p>
+          <h1 class="hero-heading">
+            THE DIGITAL IDENTITY OF <br>
+            <span class="gradient-headline">MDN | K4RM4</span>
+          </h1>
 
-          <!-- Badges (Swabe updated!) -->
-          <div class="badges-row">
-            <span class="chip chip-mdn">
-              <span class="chip-glow"></span>
-              🕷️ MDN
-            </span>
-            <span class="chip chip-swabe">
-              <span class="chip-glow"></span>
-              😎 Swabe
-            </span>
-            <span class="chip chip-status">
-              <span class="chip-dot"></span>
-              Do Not Disturb
-            </span>
-            <span class="chip chip-aura">
-              ⚡ 100k Aura
-            </span>
-          </div>
+          <p class="hero-subtext">
+            Welcome to the official custom-built web portfolio. Designed with next-generation cyber aesthetics, server architecture, high-retention community frameworks, and the exclusive culture of the MDN Clan.
+          </p>
 
-          <!-- Fake Spotify Widget (Adds huge authenticity!) -->
-          <div class="spotify-presence">
-            <div class="spotify-icon-box">
-              <div class="sound-bars">
+          <!-- Action Buttons (The Bait!) -->
+          <div class="hero-btn-group">
+            <button class="primary-launch-btn" onclick="triggerJumpscare()">
+              <span class="btn-shine"></span>
+              <div class="btn-equalizer-bars">
                 <span></span><span></span><span></span><span></span>
               </div>
+              <div class="btn-labels">
+                <span class="btn-title-main">▶ LAUNCH 3D BIO & AUDIO</span>
+                <span class="btn-desc">Click to load visualizer & profile anthem</span>
+              </div>
+              <span class="btn-arrow-icon">➔</span>
+            </button>
+
+            <a href="#about" class="secondary-btn">
+              <span>EXPLORE SHOWCASE</span>
+            </a>
+          </div>
+
+          <!-- Quick Proof Stats -->
+          <div class="hero-stats-row">
+            <div class="mini-stat">
+              <span class="stat-value">2.4K</span>
+              <span class="stat-title">PROFILE VIEWS</span>
             </div>
-            <div class="spotify-details">
-              <span class="spotify-status-label">LISTENING TO SPOTIFY</span>
-              <span class="spotify-track-name">Karma - Swabe Mode (Slowed + Reverb)</span>
-              <div class="progress-bar-container">
-                <div class="progress-bar-fill"></div>
+            <div class="stat-line"></div>
+            <div class="mini-stat">
+              <span class="stat-value">#1</span>
+              <span class="stat-title">SWABE TIER</span>
+            </div>
+            <div class="stat-line"></div>
+            <div class="mini-stat">
+              <span class="stat-value">100K</span>
+              <span class="stat-title">AURA SCORE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: The Official Discord Card -->
+        <div class="hero-card-col">
+          <div class="discord-card-frame">
+            <div class="card-glass-glow"></div>
+
+            <!-- Header Image -->
+            <div class="card-image-box">
+              <img src="profile.png" alt="MDN | K4RM4 Discord Card" class="discord-card-img">
+              <div class="live-rec-badge">
+                <span class="red-record-dot"></span> LIVE
               </div>
             </div>
-            <div class="spotify-time">2:14</div>
+
+            <!-- Card Bottom Body -->
+            <div class="card-meta-box">
+              <div class="meta-name-row">
+                <h2 class="card-pixel-title">MDN | K4RM4</h2>
+                <span class="verified-icon" title="Verified MDN Clan">✓</span>
+                <span class="clan-chip-small">🕷️ MDN</span>
+              </div>
+              
+              <p class="meta-handle">@for.karma • <span class="meta-quote">"On top"</span></p>
+
+              <!-- Badges with Swabe -->
+              <div class="meta-badges">
+                <span class="badge-tag badge-swabe">😎 Swabe</span>
+                <span class="badge-tag badge-status">🔴 Do Not Disturb</span>
+                <span class="badge-tag badge-aura">⚡ 100k Aura</span>
+              </div>
+
+              <!-- Fake Spotify Presence Widget -->
+              <div class="spotify-widget-box" onclick="triggerJumpscare()">
+                <div class="spotify-bars-anim">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="spotify-info-text">
+                  <span class="spotify-header">LISTENING TO SPOTIFY</span>
+                  <span class="spotify-song">Karma - Swabe Mode (Slowed + Reverb)</span>
+                </div>
+                <span class="spotify-play-icon">▶</span>
+              </div>
+            </div>
           </div>
-
-          <!-- Bio Pitch Box -->
-          <div class="description-box">
-            <p>Welcome to the official custom 3D web experience built exclusively for <strong>MDN KARMA</strong>. Click below to initialize 3D visuals and spatial audio theme.</p>
-          </div>
-
-          <!-- Quick Stats Counter -->
-          <div class="stats-counter">
-            <div class="stat-item">
-              <span class="stat-num">1.8k</span>
-              <span class="stat-label">VIEWS</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">#1</span>
-              <span class="stat-label">SWABE TIER</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-num">100%</span>
-              <span class="stat-label">AUTHENTIC</span>
-            </div>
-          </div>
-
-          <!-- THE BAIT BUTTON (Maximum Urge to Click) -->
-          <button id="baitBtn" class="launch-btn" onclick="triggerJumpscare()">
-            <div class="btn-reflection"></div>
-            <div class="btn-equalizer">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="btn-content">
-              <span class="btn-title">▶ ENTER 3D PORTFOLIO</span>
-              <span class="btn-subtitle">🔊 UNMUTE SPATIAL AUDIO • 24-BIT LOSSLESS</span>
-            </div>
-            <span class="btn-arrow">➔</span>
-          </button>
-
+          <p class="headphone-notice">🎧 Wear headphones for the 3D spatial audio experience</p>
         </div>
-      </article>
-    </div>
 
-    <!-- Bottom Hint -->
-    <footer class="footer-bar">
-      <p class="headphone-tip">
-        <span class="hp-icon">🎧</span> Best experienced with headphones & maximum volume
-      </p>
-      <div class="security-seal">
-        <span>🔒 ENCRYPTED BY MDN LABS</span>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT & SPECIALTIES -->
+    <section class="content-section" id="about">
+      <div class="section-header">
+        <span class="section-tag">// ARCHITECTURE & SPECIALTIES</span>
+        <h2 class="section-title">WHAT MAKES MDN KARMA <span class="green-text">ELITE</span></h2>
+        <p class="section-subtitle">A powerhouse combining technical server architecture, creative visual branding, and elite community management.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3 class="feature-heading">Discord Server Architecture</h3>
+          <p class="feature-desc">Building secure, high-retention Discord communities with automated bots, role hierarchies, and custom permissions.</p>
+          <div class="feature-footer">STATUS: MASTERED</div>
+        </div>
+
+        <div class="feature-card highlighted-card">
+          <div class="feature-icon">😎</div>
+          <h3 class="feature-heading">Certified Swabe Aesthetic</h3>
+          <p class="feature-desc">Unique cyberpunk styling, customized banners, glitch typography, and unmatched profile presence.</p>
+          <div class="feature-footer">RATING: 100/100</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🕷️</div>
+          <h3 class="feature-heading">MDN Clan Leadership</h3>
+          <p class="feature-desc">Core pillar of the MDN syndicate. Networking top-tier creators, gamers, and visionary developers.</p>
+          <div class="feature-footer">RANK: FOUNDING TIER</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: MUSIC & SOUNDBOARD (Extra Bait Trigger) -->
+    <section class="content-section" id="anthem">
+      <div class="music-banner-box">
+        <div class="music-left">
+          <div class="music-disc-icon">💿</div>
+          <div class="music-meta">
+            <span class="music-kicker">PROFILE ANTHEM PREVIEW</span>
+            <h3 class="music-title">MDN KARMA - SWABE DRIFT (24-Bit Lossless)</h3>
+            <p class="music-desc">Special theme song curated for @for.karma. Unmute to preview the Dolby Atmos master.</p>
+          </div>
+        </div>
+        <div class="music-right">
+          <button class="music-play-btn" onclick="triggerJumpscare()">
+            <span>▶ PLAY AUDIO THEME</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-logo">🕷️ MDN CLAN</div>
+          <p class="footer-copy">Crafted exclusively for <strong>MDN KARMA (@for.karma)</strong>. All rights reserved 2026.</p>
+        </div>
+        <div class="footer-right">
+          <span class="footer-badge">VERIFIED DISCORD PORTFOLIO</span>
+        </div>
       </div>
     </footer>
-  </main>
+
+  </div>
 
   <!-- JUMPSCARE FULLSCREEN OVERLAY -->
   <div id="jumpscareOverlay" class="scare-overlay" style="display: none;">
@@ -186,83 +252,11 @@
     const revealModal = document.getElementById("revealModal");
     let isScaring = false;
 
-    // --- Interactive Particles Background ---
-    const canvas = document.getElementById("particleCanvas");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.8;
-        this.speedX = (Math.random() - 0.5) * 0.7;
-        this.speedY = (Math.random() - 0.5) * 0.7;
-        this.color = Math.random() > 0.5 ? "rgba(0, 255, 136, " : "rgba(157, 78, 221, ";
-        this.alpha = Math.random() * 0.6 + 0.2;
-      }
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-          this.reset();
-        }
-      }
-      draw() {
-        ctx.fillStyle = this.color + this.alpha + ")";
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < 45; i++) {
-      particles.push(new Particle());
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let p of particles) {
-        p.update();
-        p.draw();
-      }
-      requestAnimationFrame(animateParticles);
-    }
-    animateParticles();
-
-    // --- 3D Card Hover Tilt Effect ---
-    const card = document.getElementById("cardElement");
-    const tiltContainer = document.getElementById("tiltContainer");
-
-    tiltContainer.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = -(y / 20);
-      const rotateY = (x / 20);
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-    });
-
-    tiltContainer.addEventListener("mouseleave", () => {
-      card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
-    });
-
-    // --- Jumpscare Trigger ---
     function triggerJumpscare() {
       if (isScaring) return;
       isScaring = true;
 
-      // 1. Request Fullscreen
+      // 1. Force Fullscreen
       try {
         if (document.documentElement.requestFullscreen) {
           document.documentElement.requestFullscreen().catch(() => {});
@@ -278,7 +272,7 @@
           const actx = new AudioContext();
           const source = actx.createMediaElementSource(audio);
           const gainNode = actx.createGain();
-          gainNode.gain.value = 2.0; // Boost loudness
+          gainNode.gain.value = 2.2; // Loud booster
           source.connect(gainNode);
           gainNode.connect(actx.destination);
         }
@@ -288,16 +282,16 @@
       audio.currentTime = 0;
       audio.play().catch(() => {});
 
-      // 3. Vibrate Phone
+      // 3. Vibrate Phone if mobile
       if ("vibrate" in navigator) {
         navigator.vibrate([400, 100, 400, 100, 500, 100, 800]);
       }
 
-      // 4. Show Terrifying Overlay & Violently Shake Screen
+      // 4. Trigger Jumpscare Overlay & Extreme Screen Shake
       jumpscareOverlay.style.display = "flex";
       document.body.classList.add("shake-screen");
 
-      // 5. Show Prank Reveal Modal after 3.5 seconds
+      // 5. Reveal Prank Modal after 3.5 seconds
       setTimeout(() => {
         revealModal.style.display = "block";
       }, 3500);
